@@ -6,7 +6,7 @@ class Queue:
         self.queue.append(item)# вставка в хвост
 
     def dequeue(self):
-        if self.size == 0:
+        if self.size() == 0:
             return None # если очередь пустая
         else:
             s = self.queue[0]
