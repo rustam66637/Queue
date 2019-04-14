@@ -1,13 +1,17 @@
 class Queue:
     def __init__(self):
-        # инициализация хранилища данных
+        self.queue = []# инициализация хранилища данных
 
     def enqueue(self, item):
-        # вставка в хвост
+        self.queue.append(item)# вставка в хвост
 
     def dequeue(self):
-        # выдача из головы
-        return None # если очередь пустая
+        if self.size == 0:
+            return None # если очередь пустая
+        else:
+            s = self.queue[0]
+            del self.queue[0]
+            return s# выдача из головы
 
     def size(self):
-        return 0 # размер очереди
+        return len(self.queue) # размер очереди
